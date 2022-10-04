@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Schema;
 using UnityEngine;
 
 namespace RPG.Stats
@@ -7,16 +8,32 @@ namespace RPG.Stats
     {
         [SerializeField] private ProgressionCharacterClass[] m_CharacterClasses = null;
 
-        public float GetHealth(CharacterClass character, int level)
+        public float GetStat(Stats stats, CharacterClass character, int level)
         {
             foreach (ProgressionCharacterClass item in m_CharacterClasses)
             {
-                if (item.m_CharacterClass == character)
+                if (item.m_CharacterClass != character)
                 {
-                    //return item.m_Health[level - 1];
+                    continue;
+                }
+
+                foreach (var VARIABLE in item.stats)
+                {
+                    if (VARIABLE.stats != stats)
+                    {
+                        continue;
+                    }
+
+                    if (VARIABLE.levels.Length < level)
+                    {
+                        continue;
+                    }
+
+                    return VARIABLE.levels[level - 1];
                 }
             }
-            return 30;
+
+            return 0;
         }
 
         [System.Serializable]
