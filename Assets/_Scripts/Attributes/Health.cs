@@ -17,7 +17,7 @@ namespace RPG.Attributes
 
         private void Start()
         {
-            healthPoints = GetComponent<BaseStats>().GetStat(Stats. Health);
+            healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         internal void TakeDamage(GameObject instigator, float damage)
@@ -36,12 +36,12 @@ namespace RPG.Attributes
         {
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) return;
-            experience.GainExperience(GetComponent<BaseStats>().GetStat(Stats.Stats.ExperienceReward));
+            experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
         }
 
         public float GetPercentage()
         {
-            return 100 * healthPoints / GetComponent<BaseStats>().GetStat(Stats.Stats.Health);
+            return 100 * healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         private void Die()

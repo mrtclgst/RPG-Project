@@ -2781,7 +2781,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1522158, y: 1}
+    m_SensorSize: {x: 1.7780429, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2872,7 +2872,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1522158, y: 1}
+    m_SensorSize: {x: 1.7780429, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3362,7 +3362,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1522158, y: 1}
+    m_SensorSize: {x: 1.7780429, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4926,6 +4926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5423702533072865601, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: healthPoints
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
 --- !u!1001 &1867824924
@@ -5656,6 +5660,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 817846643914781246, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
+      propertyPath: m_StartingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4271459896256768627, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: weapon
       value: 
