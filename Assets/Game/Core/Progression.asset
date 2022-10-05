@@ -13,17 +13,23 @@ MonoBehaviour:
   m_Name: Progression
   m_EditorClassIdentifier: 
   m_CharacterClasses:
-  - m_CharacterClass: 1
+  - m_CharacterClass: 0
     stats:
     - stats: 0
       levels:
-      - 50
-      - 0
-  - m_CharacterClass: 0
+      - 200
+      - 300
+      - 400
+      - 500
+  - m_CharacterClass: 1
     stats:
-    - stats: 0
-      levels: []
-  - m_CharacterClass: 0
+    - stats: 1
+      levels:
+      - 10
+      - 20
+  - m_CharacterClass: 3
     stats:
-    - stats: 0
-      levels: []
+    - stats: 1
+      levels:
+      - 10
+      - 20

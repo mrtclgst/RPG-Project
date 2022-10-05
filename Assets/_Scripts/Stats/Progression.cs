@@ -17,23 +17,23 @@ namespace RPG.Stats
                     continue;
                 }
 
-                foreach (var VARIABLE in item.stats)
+                foreach (var item2 in item.stats)
                 {
-                    if (VARIABLE.stats != stats)
+                    if (item2.stats != stats)
                     {
                         continue;
                     }
 
-                    if (VARIABLE.levels.Length < level)
+                    if (item2.levels.Length < level)
                     {
                         continue;
                     }
 
-                    return VARIABLE.levels[level - 1];
+                    return item2.levels[level - 1];
                 }
             }
 
-            return 0;
+            return 100;
         }
 
         [System.Serializable]

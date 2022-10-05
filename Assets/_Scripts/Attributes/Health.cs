@@ -17,7 +17,7 @@ namespace RPG.Attributes
 
         private void Start()
         {
-            healthPoints = GetComponent<BaseStats>().GetStat(Stats.Stats.Health);
+            healthPoints = GetComponent<BaseStats>().GetStat(Stats. Health);
         }
 
         internal void TakeDamage(GameObject instigator, float damage)
