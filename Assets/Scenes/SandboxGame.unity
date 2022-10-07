@@ -2793,7 +2793,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7761557, y: 1}
+    m_SensorSize: {x: 0.9447323, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2884,7 +2884,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7761557, y: 1}
+    m_SensorSize: {x: 0.9447323, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3378,7 +3378,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7761557, y: 1}
+    m_SensorSize: {x: 0.9447323, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4948,7 +4948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423702533072865601, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: healthPoints
-      value: 50
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
@@ -5680,18 +5680,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 817846643914781246, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_StartingLevel
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4271459896256768627, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 3e7d541fc5bd0d24ba89bdb0b746ff79, type: 2}
-    - target: {fileID: 4831414048274984012, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_CameraDistance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4831414048533774617, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5739,46 +5727,6 @@ PrefabInstance:
     - target: {fileID: 4831414048533774622, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: m_Name
       value: Core
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049175021548, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 46.97735
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049175021548, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8856263
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049175021548, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -36.875053
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049175021549, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7774799
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049615104858, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 46.97735
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049615104858, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8856263
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831414049615104858, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -36.875053
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343480402066188442, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
-    - target: {fileID: 5343480402071323692, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343480402071325526, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}

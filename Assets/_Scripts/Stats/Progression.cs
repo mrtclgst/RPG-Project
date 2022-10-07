@@ -78,7 +78,7 @@ namespace RPG.Stats
             }
         }
 
-
+ 
         [System.Serializable]
         class ProgressionCharacterClass
         {

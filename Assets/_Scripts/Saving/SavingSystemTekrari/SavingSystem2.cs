@@ -26,7 +26,7 @@ namespace RPG.Saving
 
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
-                //byte[] bytes = Encoding.UTF8.GetBytes("¡Hola Mundo");
+                //byte[] bytes = Encoding.UTF8.GetBytes("ï¿½Hola Mundo");
                 //Transform playerTransform = GetPlayerTransform();
                 BinaryFormatter formatter = new BinaryFormatter();
                 //SerializableVector3 position = new SerializableVector3(transform.position);

@@ -7,6 +7,7 @@ namespace RPG.Saving
     public class SavingWrapper2 : MonoBehaviour
     {
         const string defaultSaveFile = "save";
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.S))

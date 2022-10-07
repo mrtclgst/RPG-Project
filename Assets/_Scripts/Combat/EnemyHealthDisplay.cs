@@ -23,7 +23,7 @@ namespace RPG.Combat
             }
 
             Health health = m_Fighter.GetTarget();
-            GetComponent<TextMeshProUGUI>().text = $"{health.GetPercentage():0}%";
+            GetComponent<TextMeshProUGUI>().text = $"{health.GetHealthPoints():0}/{health.GetMaxHealthPoints():0}";
         }
     }
 }

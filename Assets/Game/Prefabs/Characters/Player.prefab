@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 3168748490404440877, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_LevelUpParticleEffect
+      value: 
+      objectReference: {fileID: 1071843781356815326, guid: 5f73fed6295808c41ad202f3e5554183, type: 3}
     - target: {fileID: 7733970384962864490, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
       propertyPath: m_Name
       value: Player
@@ -187,18 +191,6 @@ CapsuleCollider:
   m_Height: 1.7354865
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &5046953374903438197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 646267277313578955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7b3dd4e7d87be43b250837848ad203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3606868715807463788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +204,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExperiencePoints: 0
+--- !u!114 &5046953374903438197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646267277313578955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7b3dd4e7d87be43b250837848ad203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &646267277313578959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7733970384962864494, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}

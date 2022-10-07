@@ -1,12 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
 using RPG.Saving;
 using RPG.Attributes;
+using RPG.Stats;
 
 namespace RPG.Combat
 {
-    public class Fighter : MonoBehaviour, IAction, ISaveable
+    public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
     {
         [SerializeField] float timeBetweenAttacks = 1;
         [SerializeField] Transform rightHandTransform = null;
@@ -91,13 +93,15 @@ namespace RPG.Combat
                 return;
             }
 
+            float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
+
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject, damage);
             }
             else
             {
-                target.TakeDamage(gameObject, currentWeapon.GetDamage());
+                target.TakeDamage(gameObject, damage);
             }
         }
 
@@ -118,6 +122,14 @@ namespace RPG.Combat
         {
             GetComponent<Animator>().ResetTrigger("attack");
             GetComponent<Animator>().SetTrigger("stopAttack");
+        }
+
+        public IEnumerable<float> GetAdditiveModifier(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return currentWeapon.GetDamage();
+            }
         }
 
         public void EquipWeapon(Weapon weapon)
