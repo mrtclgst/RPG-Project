@@ -9,6 +9,8 @@ namespace RPG.Stats
         [SerializeField] CharacterClass m_CharacterClass;
         [SerializeField] private Progression m_Progression;
         [SerializeField] private GameObject m_LevelUpParticleEffect = null;
+
+        [SerializeField] bool m_ShouldUseModifiers = false;
         private int m_CurrentLevel = 0;
 
         public event Action onLevelUp;
@@ -41,7 +43,13 @@ namespace RPG.Stats
 
         public float GetStat(Stat stat)
         {
-            return m_Progression.GetStat(stat, m_CharacterClass, GetLevel()) + GetAdditiveModifier(stat);
+            return GetBaseStat(stat) + GetAdditiveModifier(stat) * (1 + GetModifierPercentage(stat) / 100);
+        }
+
+
+        private float GetBaseStat(Stat stat)
+        {
+            return m_Progression.GetStat(stat, m_CharacterClass, GetLevel());
         }
 
 
@@ -79,10 +87,15 @@ namespace RPG.Stats
 
         private float GetAdditiveModifier(Stat stat)
         {
+            if (!m_ShouldUseModifiers)
+            {
+                return 0;
+            }
+
             float total = 0;
             foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
             {
-                foreach (float modifier in provider.GetAdditiveModifier(stat))
+                foreach (float modifier in provider.GetAdditiveModifiers(stat))
                 {
                     total += modifier;
                 }
@@ -90,6 +103,26 @@ namespace RPG.Stats
 
             return total;
         }
+
+        private float GetModifierPercentage(Stat stat)
+        {
+            if (!m_ShouldUseModifiers)
+            {
+                return 0;
+            }
+
+            float total = 0;
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach (float modifier in provider.GetPercentageModifiers(stat))
+                {
+                    total += modifier;
+                }
+            }
+
+            return total;
+        }
+
         //artik gerek yok yukaridan cekecegiz
         // public float GetExperienceReward()
         // {

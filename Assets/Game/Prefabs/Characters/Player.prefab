@@ -115,6 +115,10 @@ PrefabInstance:
       value: player
       objectReference: {fileID: 0}
     - target: {fileID: 3168748490404440877, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_ShouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168748490404440877, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
       propertyPath: m_LevelUpParticleEffect
       value: 
       objectReference: {fileID: 1071843781356815326, guid: 5f73fed6295808c41ad202f3e5554183, type: 3}
@@ -168,6 +172,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733970384962864494, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733970385785346803, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
