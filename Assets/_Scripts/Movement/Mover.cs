@@ -16,12 +16,18 @@ namespace RPG.Movement
         NavMeshAgent navMeshAgent;
         Health health;
 
-        private void Start()
+        private void Awake()
         {
             animator = GetComponent<Animator>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
         }
+
+        private void Start()
+        {
+            
+        }
+
         private void Update()
         {
             navMeshAgent.enabled = !health.IsDead();
@@ -42,6 +48,7 @@ namespace RPG.Movement
             GetComponent<ActionSchedular>().StartAction(this);
             MoveTo(destination, speedFraction);
         }
+
         public void MoveTo(Vector3 destination, float speedFraction)
         {
             navMeshAgent.destination = destination;
@@ -85,7 +92,7 @@ namespace RPG.Movement
 
             ////MoverSaveData data = (MoverSaveData)state;
             SerializableVector3 position = (SerializableVector3)state;
-            GetComponent<NavMeshAgent>().enabled = false;
+            navMeshAgent.enabled = false;
 
             transform.position = position.ToVector();
 
@@ -94,7 +101,8 @@ namespace RPG.Movement
 
             ////transform.position = data.position.ToVector();
             ////transform.eulerAngles = data.rotation.ToVector();
-            GetComponent<NavMeshAgent>().enabled = true;
+            navMeshAgent.enabled = true;
+            GetComponent<ActionSchedular>().CancelCurrentAction();//sonradan ekledim
         }
     }
 }
