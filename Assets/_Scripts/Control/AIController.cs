@@ -4,6 +4,7 @@ using RPG.Core;
 using RPG.Movement;
 using System;
 using UnityEngine;
+
 namespace RPG.Control
 {
     public class AIController : MonoBehaviour
@@ -13,27 +14,28 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
-        [Range(0, 1)]
-        [SerializeField] float patrollingSpeedFraction = 0.2f;
+        [Range(0, 1)] [SerializeField] float patrollingSpeedFraction = 0.2f;
 
         Fighter fighter;
         GameObject player;
         Health health;
         Mover mover;
-
-
+        
         Vector3 guardStartLocation;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceReachWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             fighter = GetComponent<Fighter>();
             player = GameObject.FindWithTag("Player");
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
+        }
 
+        private void Start()
+        {
             guardStartLocation = transform.position;
         }
 
@@ -53,6 +55,7 @@ namespace RPG.Control
             {
                 PatrolBehaviour();
             }
+
             UpdateTimers();
         }
 
@@ -64,7 +67,6 @@ namespace RPG.Control
 
         private void PatrolBehaviour()
         {
-
             Vector3 nextPosition = guardStartLocation;
 
             if (patrolPath != null)
@@ -74,8 +76,10 @@ namespace RPG.Control
                     timeSinceReachWaypoint = 0;
                     CycleWaypoint();
                 }
+
                 nextPosition = GetCurrentWaypoint();
             }
+
             if (timeSinceReachWaypoint > waypointDwellTime)
             {
                 mover.StartMoveAction(nextPosition, patrollingSpeedFraction);

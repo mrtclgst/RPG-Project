@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using RPG.Saving;
 using RPG.Stats;
@@ -18,11 +19,20 @@ namespace RPG.Attributes
 
         private void Start()
         {
-            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
             if (m_HealthPoints < 0)
             {
                 m_HealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             }
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
         }
 
 

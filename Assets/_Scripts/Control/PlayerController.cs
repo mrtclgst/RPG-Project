@@ -9,10 +9,11 @@ namespace RPG.Control
     {
         Health health;
 
-        private void Start()
+        private void Awake()
         {
             health = GetComponent<Health>();
         }
+
         private void Update()
         {
             if (health.IsDead()) return;
@@ -39,8 +40,10 @@ namespace RPG.Control
                 {
                     GetComponent<Fighter>().Attack(target.gameObject);
                 }
+
                 return true;
             }
+
             return false;
         }
 
@@ -55,10 +58,13 @@ namespace RPG.Control
                 {
                     GetComponent<Mover>().StartMoveAction(hit.point, 1f);
                 }
+
                 return true;
             }
+
             return false;
         }
+
         private static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
