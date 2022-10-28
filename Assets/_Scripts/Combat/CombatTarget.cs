@@ -7,6 +7,11 @@ namespace RPG.Combat
     [RequireComponent(typeof(Health))]
     public class CombatTarget : MonoBehaviour, IRaycastable
     {
+        public CursorType GetCursorType()
+        {
+            return CursorType.Combat;
+        }
+
         public bool HandleRaycast(PlayerController callingController)
         {
             // CombatTarget target = hit.transform.GetComponent<CombatTarget>();
@@ -21,10 +26,9 @@ namespace RPG.Combat
 
             if (Input.GetMouseButton(0))
             {
-                GetComponent<Fighter>().Attack(target.gameObject);
+                callingController.GetComponent<Fighter>().Attack(gameObject);
             }
 
-            SetCursor(CursorType.Combat);
             return true;
         }
     }
