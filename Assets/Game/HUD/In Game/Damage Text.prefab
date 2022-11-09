@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 763120315942604820}
   - component: {fileID: 2207091873092680671}
   - component: {fileID: 7790904687489642543}
+  - component: {fileID: 843278890300523552}
+  - component: {fileID: 8641042257806795062}
   m_Layer: 5
   m_Name: Damage Text
   m_TagString: Untagged
@@ -38,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.16}
+  m_AnchoredPosition: {x: 0, y: 2.1600037}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7800550849078833337
@@ -84,7 +86,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2207091873092680671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +116,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a9d2de9be27ed4b8a768aeb84dc018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &843278890300523552
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937344014283402070}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b1ed7048cbdfc7344bc36d33e4527363, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b1ed7048cbdfc7344bc36d33e4527363, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!225 &8641042257806795062
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937344014283402070}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8863631570862289568
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +210,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '100
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -189,8 +221,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281808869
+  m_fontColor: {r: 0.8962264, g: 0.21560161, b: 0.21560161, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
