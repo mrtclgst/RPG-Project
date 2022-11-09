@@ -667,6 +667,14 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 814335347}
+    - target: {fileID: 1437547411750729581, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823888543198959157, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3971259404217179829, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: uniqueIdentifier
       value: 50578d6e-6fcc-453a-b0dc-55661614d9fe
@@ -743,6 +751,14 @@ PrefabInstance:
     - target: {fileID: 2932967870886494922, guid: f93d37e02ca529f4690180d4611fac4d, type: 3}
       propertyPath: m_CharacterClass
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587826203251278436, guid: f93d37e02ca529f4690180d4611fac4d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284741676377432892, guid: f93d37e02ca529f4690180d4611fac4d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7502658729382521993, guid: f93d37e02ca529f4690180d4611fac4d, type: 3}
       propertyPath: m_RootOrder
@@ -1636,6 +1652,14 @@ PrefabInstance:
     - target: {fileID: 802444846480531457, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: patrolPath
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437547411750729581, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823888543198959157, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3971259404217179829, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: uniqueIdentifier
@@ -2793,7 +2817,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.9447323, y: 1}
+    m_SensorSize: {x: 0.93986255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2884,7 +2908,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.9447323, y: 1}
+    m_SensorSize: {x: 0.93986255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3253,6 +3277,14 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 1870720156}
+    - target: {fileID: 1437547411750729581, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823888543198959157, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3247642914776423009, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3378,7 +3410,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.9447323, y: 1}
+    m_SensorSize: {x: 0.93986255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4274,6 +4306,14 @@ PrefabInstance:
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 981057467}
+    - target: {fileID: 1437547411750729581, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823888543198959157, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3247642914776423009, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4894,6 +4934,14 @@ PrefabInstance:
     - target: {fileID: 802444846480531457, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: chaseDistance
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437547411750729581, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823888543198959157, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3971259404217179829, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: uniqueIdentifier
@@ -5779,6 +5827,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4355991247068232208, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 7661a5cc-0a40-46e2-aea9-4af2d65a57f0
+      objectReference: {fileID: 0}
     - target: {fileID: 4831414048533774617, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: m_RootOrder
       value: 4

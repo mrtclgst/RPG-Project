@@ -3,6 +3,7 @@ using UnityEngine;
 using RPG.Saving;
 using RPG.Stats;
 using RPG.Core;
+using UnityEngine.Events;
 
 namespace RPG.Attributes
 {
@@ -10,6 +11,7 @@ namespace RPG.Attributes
     {
         [SerializeField] float m_HealthPoints = -1f;
         [SerializeField] private float m_RegenerationPercentage = 70;
+        [SerializeField] private UnityEvent<float> m_TakeDamage;
         bool isDead = false;
 
         public bool IsDead()
@@ -35,7 +37,6 @@ namespace RPG.Attributes
             GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
         }
 
-
         internal void TakeDamage(GameObject instigator, float damage)
         {
             m_HealthPoints = Mathf.Max(m_HealthPoints - damage, 0);
@@ -43,6 +44,10 @@ namespace RPG.Attributes
             {
                 Die();
                 AwardExperience(instigator);
+            }
+            else
+            {
+                m_TakeDamage.Invoke(damage);
             }
 
             // print(healthPoints);
@@ -60,7 +65,12 @@ namespace RPG.Attributes
 
         public float GetPercentage()
         {
-            return 100 * m_HealthPoints / GetComponent<BaseStats>().GetStat(Stat.Health);
+            return 100 * GetFraction();
+        }
+
+        public float GetFraction()
+        {
+            return m_HealthPoints / GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         private void Die()

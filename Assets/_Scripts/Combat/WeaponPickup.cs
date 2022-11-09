@@ -16,13 +16,13 @@ namespace RPG.Combat
         {
             if (other.gameObject.tag == "Player")
             {
-                PickUp(GetComponent<Fighter>());
+                PickUp(other.GetComponent<Fighter>());
             }
         }
 
         private void PickUp(Fighter fighter)
         {
-            fighter.GetComponent<Fighter>().EquipWeapon(weapon);
+            fighter.EquipWeapon(weapon);
             StartCoroutine(HideForSecond(respawnTime));
         }
 
