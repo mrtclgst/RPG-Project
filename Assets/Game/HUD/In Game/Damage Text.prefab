@@ -13,12 +13,8 @@ GameObject:
   - component: {fileID: 763120315942604820}
   - component: {fileID: 2207091873092680671}
   - component: {fileID: 7790904687489642543}
-<<<<<<< Updated upstream
   - component: {fileID: 843278890300523552}
   - component: {fileID: 8641042257806795062}
-=======
-  - component: {fileID: 3699656882090448646}
->>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Damage Text
   m_TagString: Untagged
@@ -120,20 +116,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a9d2de9be27ed4b8a768aeb84dc018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!111 &843278890300523552
 Animation:
-=======
---- !u!114 &3699656882090448646
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2937344014283402070}
   m_Enabled: 1
-<<<<<<< Updated upstream
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: b1ed7048cbdfc7344bc36d33e4527363, type: 2}
   m_Animations:
@@ -154,12 +144,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
-=======
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2d5fc6f8ae25f04697d4f61142781b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!1 &8863631570862289568
 GameObject:
   m_ObjectHideFlags: 0
