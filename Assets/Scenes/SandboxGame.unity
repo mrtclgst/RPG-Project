@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: ad9679dd1d0ef1a489aa0fe91226fb94, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5827,10 +5827,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4355991247068232208, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
-      propertyPath: uniqueIdentifier
-      value: 7661a5cc-0a40-46e2-aea9-4af2d65a57f0
-      objectReference: {fileID: 0}
     - target: {fileID: 4831414048533774617, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5878,6 +5874,22 @@ PrefabInstance:
     - target: {fileID: 4831414048533774622, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: m_Name
       value: Core
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831414049175021549, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 0.93986255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831414049615104858, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 46.97735
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831414049615104858, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8856263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831414049615104858, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.875053
       objectReference: {fileID: 0}
     - target: {fileID: 7587665055686178718, guid: 8f0ada579de9fb1489451b4ef89098db, type: 3}
       propertyPath: m_PresetInfoIsWorld
