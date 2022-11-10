@@ -1,5 +1,6 @@
 using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Combat
 {
@@ -14,6 +15,7 @@ namespace RPG.Combat
         Health target = null;
         private GameObject instigator = null;
         float damage;
+        [SerializeField] private UnityEvent m_OnHit;
 
         private void Start()
         {
@@ -59,6 +61,7 @@ namespace RPG.Combat
                 enemyHP.TakeDamage(instigator, damage);
 
                 projectileSpeed = 0;
+                m_OnHit.Invoke();
 
                 if (hitEffect != null)
                 {

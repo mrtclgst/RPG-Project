@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,37 +20,38 @@ namespace RPG.SceneManagement
             m_Fader.alpha = 1;
         }
 
-        public IEnumerator FadeOut(float time)
+        public Coroutine FadeOut(float time)
         {
-            if (m_CurrentActiveFade != null)
-            {
-                StopCoroutine(m_CurrentActiveFade);
-            }
-
-            m_CurrentActiveFade = StartCoroutine(FadeOutRoutine(time));
-            yield return m_CurrentActiveFade;
+            return Fade(1, time);
         }
 
-        public IEnumerator FadeIn(float time)
+        public Coroutine FadeIn(float time)
+        {
+            return Fade(0, time);
+        }
+
+        public Coroutine Fade(float target, float time)
         {
             if (m_CurrentActiveFade != null)
             {
                 StopCoroutine(m_CurrentActiveFade);
             }
 
-            m_CurrentActiveFade = StartCoroutine(FadeInRoutine(time));
-            yield return m_CurrentActiveFade;
+            m_CurrentActiveFade = StartCoroutine(FadeRoutine(target, time));
+            return m_CurrentActiveFade;
         }
 
         private IEnumerator FadeRoutine(float target, float time)
         {
-            while (m_Fader.alpha > 0)
+            while (!Mathf.Approximately(m_Fader.alpha, target))
             {
-                m_Fader.alpha -= Time.deltaTime / time; //sahne gecisi arasinin alpha degeri
+                m_Fader.alpha =
+                    Mathf.MoveTowards(m_Fader.alpha, target,
+                        Time.deltaTime / time); //sahne gecisi arasinin alpha degeri
                 yield return null;
             }
         }
-        
+
         // private IEnumerator FadeOutRoutine(float time)
         // {
         //     while (m_Fader.alpha < 1)
