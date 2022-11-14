@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 15404872987055771, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
+      propertyPath: m_CharacterClass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 802444846480531457, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
       propertyPath: chaseDistance
       value: 22
@@ -69,22 +73,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
---- !u!1 &7502658729382521997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4655464475593472220, guid: 5718ce09765c48043a0b8ef8f935fb15, type: 3}
-  m_PrefabInstance: {fileID: 2919814817514968145}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8502749264888301882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7502658729382521997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f8e496d6b3c6a44a39977deb19c834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StartingLevel: 1
-  m_CharacterClass: 3

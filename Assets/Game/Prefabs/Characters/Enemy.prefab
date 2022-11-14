@@ -15,6 +15,34 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 802444846480531457}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_TakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2010702077506073440, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
       propertyPath: weapon
       value: 
@@ -43,6 +71,10 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 3247642914771439155}
+    - target: {fileID: 3168748490404440877, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
+      propertyPath: m_CharacterClass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7733970384962864490, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -97,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671536649896513633, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}
@@ -155,23 +187,6 @@ MonoBehaviour:
   waypointTolerance: 1
   waypointDwellTime: 3
   patrollingSpeedFraction: 0.2
---- !u!114 &1507387091088984790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4655464475593472220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f8e496d6b3c6a44a39977deb19c834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StartingLevel: 1
-  m_CharacterClass: 1
-  m_Progression: {fileID: 0}
-  m_LevelUpParticleEffect: {fileID: 0}
-  m_ShouldUseModifiers: 0
 --- !u!114 &5423702533072865601 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2266504788963658505, guid: 056c41f89d3a26f428c5b11f442e7055, type: 3}

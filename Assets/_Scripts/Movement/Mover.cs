@@ -11,6 +11,7 @@ namespace RPG.Movement
     {
         [SerializeField] Transform player;
         [SerializeField] float maxSpeed = 6f;
+        [SerializeField] private float m_MaxNavPathLength = 40f;
 
         Animator animator;
         NavMeshAgent navMeshAgent;
@@ -21,11 +22,6 @@ namespace RPG.Movement
             animator = GetComponent<Animator>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
-        }
-
-        private void Start()
-        {
-            
         }
 
         private void Update()
@@ -43,10 +39,36 @@ namespace RPG.Movement
             animator.SetFloat("forwardSpeed", forwardSpeed);
         }
 
+        private float GetPathLength(NavMeshPath navMeshPath)
+        {
+            float totalDistance = 0;
+            if (navMeshPath.corners.Length < 2)
+            {
+                return totalDistance;
+            }
+
+            for (int i = 0; i < navMeshPath.corners.Length - 1; i++)
+            {
+                totalDistance += Vector3.Distance(navMeshPath.corners[i], navMeshPath.corners[i + 1]);
+            }
+
+            return totalDistance;
+        }
+
         public void StartMoveAction(Vector3 destination, float speedFraction)
         {
             GetComponent<ActionSchedular>().StartAction(this);
             MoveTo(destination, speedFraction);
+        }
+
+        public bool CanMoveTo(Vector3 destination)
+        {
+            NavMeshPath navMeshPath = new NavMeshPath();
+            bool hasPath = NavMesh.CalculatePath(transform.position, destination, NavMesh.AllAreas, navMeshPath);
+            if (!hasPath) return false;
+            if (navMeshPath.status != NavMeshPathStatus.PathComplete) return false;
+            if (GetPathLength(navMeshPath) > m_MaxNavPathLength) return false;
+            return true;
         }
 
         public void MoveTo(Vector3 destination, float speedFraction)
@@ -102,7 +124,7 @@ namespace RPG.Movement
             ////transform.position = data.position.ToVector();
             ////transform.eulerAngles = data.rotation.ToVector();
             navMeshAgent.enabled = true;
-            GetComponent<ActionSchedular>().CancelCurrentAction();//sonradan ekledim
+            GetComponent<ActionSchedular>().CancelCurrentAction(); //sonradan ekledim
         }
     }
 }

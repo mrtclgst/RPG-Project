@@ -22,6 +22,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Stats/IModifierProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/DamageText/DamageText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/DamageText/DamageTextSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/Samples~/Tutorial/Asteroids/Scripts/Controllers/SpaceshipController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Toggle/ToggleTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,7 +82,9 @@
       <option name="presentableId" value="Default" />
       <updated>1664982585579</updated>
       <workItem from="1664982591683" duration="1649000" />
-      <workItem from="1668080941413" duration="7389000" />
+      <workItem from="1668080941413" duration="7835000" />
+      <workItem from="1668150825131" duration="10559000" />
+      <workItem from="1668176377410" duration="2610000" />
     </task>
     <servers />
   </component>
